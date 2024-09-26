@@ -173,6 +173,7 @@ urlpatterns = [
     path('mymodels/<int:pk>/', mymodel_detail, name='mymodel-detail'),
     path('mymodels/create/', mymodel_create, name='mymodel-create'),
     path('mymodels/<int:pk>/update/', mymodel_update, name='mymodel-update'),
+    path('mymodels/<int:pk>/partial_update/', mymodel_partial_update, name='mymodel-partial-update'),
     path('mymodels/<int:pk>/delete/', mymodel_delete, name='mymodel-delete'),
 ]
 ```
@@ -185,7 +186,7 @@ urlpatterns = [
 - **Detail View** (`GET /mymodels/<pk>/`): Retrieves a single object by its primary key.
 - **Create View** (`POST /mymodels/create/`): Creates a new object.
 - **Update View** (`PUT /mymodels/<pk>/update/`): Updates an object.
-- **Partial Update View** (`PATCH /mymodels/<pk>/update/`): Partially updates an object.
+- **Partial Update View** (`PATCH /mymodels/<pk>/partial_update/`): Partially updates an object.
 - **Delete View** (`DELETE /mymodels/<pk>/delete/`): Deletes an object.
 
 Using `@api_view` is a straightforward way to handle different HTTP methods in function-based views. 
