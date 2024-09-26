@@ -163,6 +163,7 @@ urlpatterns = [
     path('mymodels/<int:pk>/', MyModelDetailView.as_view(), name='mymodel-detail'),
     path('mymodels/create/', MyModelCreateView.as_view(), name='mymodel-create'),
     path('mymodels/<int:pk>/update/', MyModelUpdateView.as_view(), name='mymodel-update'),
+    path('mymodels/<int:pk>/partial_update/', MyModelPartialUpdateView.as_view(), name='mymodel-partial-update'),
     path('mymodels/<int:pk>/delete/', MyModelDeleteView.as_view(), name='mymodel-delete'),
 ]
 ```
@@ -175,7 +176,7 @@ urlpatterns = [
 - **Detail View** (`GET /mymodels/<pk>/`): Retrieve a specific object.
 - **Create View** (`POST /mymodels/create/`): Create a new object.
 - **Update View** (`PUT /mymodels/<pk>/update/`): Update an existing object.
-- **Partial Update View** (`PATCH /mymodels/<pk>/update/`): Partially update an object.
+- **Partial Update View** (`PATCH /mymodels/<pk>/partial_update/`): Partially update an object.
 - **Delete View** (`DELETE /mymodels/<pk>/delete/`): Delete an object.
 
 These examples demonstrate how to handle different HTTP methods using the `APIView` class, giving you the flexibility to customize behavior as needed.
