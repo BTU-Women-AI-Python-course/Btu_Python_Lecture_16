@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "rest_framework",
 
     # my apps
-    "authors"
+    "authors",
+    "books"
 ]
 
 MIDDLEWARE = [
